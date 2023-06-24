@@ -25,7 +25,7 @@ const studies = [
         duration: "2015 - 2017",
         institution: "GHSS Vaduvanchal",
         institutionSubpart:""
-    }
+    },
 ];
 
 export default studies;
