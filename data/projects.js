@@ -75,7 +75,7 @@ const projects = [
         Flickr30k dataset. The model is
         built using the attention architecture.`,
         link:"https://github.com/mahirpc/Captionator"
-    }
+    },
 ];
 
 export default projects.reverse();
