@@ -1,0 +1,106 @@
+@import url('https://fonts.googleapis.com/css2?family=Black+Ops+One&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --foreground-rgb: 0, 0, 0;
+  --background-start-rgb: 214, 219, 220;
+  --background-end-rgb: 255, 255, 255;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --foreground-rgb: 255, 255, 255;
+    --background-start-rgb: 0, 0, 0;
+    --background-end-rgb: 0, 0, 0;
+  }
+}
+
+*{
+  margin:0px;
+  box-sizing: border-box;
+}
+
+
+body {
+  /* color: rgb(var(--foreground-rgb));
+  background: linear-gradient(
+      to bottom,
+      transparent,
+      rgb(var(--background-end-rgb))
+    )
+    rgb(var(--background-start-rgb)); */
+    background-color: rgb(240, 240, 240);
+    font-family: serif;
+}
+main{
+  height: 90vh;
+  -ms-overflow-style: none;  
+  scrollbar-width: none;
+}
+main::-webkit-scrollbar {
+  display: none;
+}
+.right-container{
+  height: 70vh;
+  width: 80vw;
+  font-family: serif;
+  @apply ml-2 md:ml-10 md:w-3/4
+}
+@media screen and (max-width: 768px) {
+  .right-container {
+    width: 95%; 
+  }
+}
+.logo{
+  font-family: 'Black Ops One', cursive;
+}
+.heading{
+  @apply w-full font-serif
+}
+.side-texts{
+  font-family: serif;
+  font-size: 19px;
+  @apply font-bold
+}
+.plain-text{
+  font-family: sans-serif;
+  @apply my-5 text-neutral-600 max-w-[600px]
+}
+.profile-container{
+  @apply flex flex-col justify-start items-start md:flex-row
+}
+.profile-img{
+  border-radius: 50%;
+}
+.project-card{
+  @apply flex flex-col justify-start rounded-md border border-solid border-slate-300
+  p-2 max-w-[300px] md:w-64 lg:w-72 mr-4 mb-4 shadow-md shadow-neutral-300 hover:bg-neutral-200
+  scale-100 hover:scale-105 transition duration-100 ease-in-out 
+}
+.education-card{
+  @apply flex flex-row justify-start rounded-md border border-solid border-slate-300
+  p-2 max-w-[510px] md:max-w-[550px] md:w-[550px] mr-4 mb-4 shadow-md shadow-neutral-300 hover:bg-neutral-200
+  scale-100 hover:scale-105 transition duration-100 ease-in-out py-3 pr-3
+}
+
+.contact-icon{
+  @apply mr-2 hover:scale-110 transform transition duration-200 ease-in-out
+}
+.education-logo{
+  @apply px-0 py-0 m-2 max-w-md max-h-24 self-center
+}
+.dialog-box{
+  position:absolute;
+  margin: auto;
+  border: 1px solid rgb(255, 255, 255);
+  border-radius: 5px;
+  box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.35);
+  background-color: rgb(234, 234, 234);
+}
+.dialog-box::backdrop{
+  background-color: rgba(0,0,0,0.7);
+  opacity: 0.9;
+}
